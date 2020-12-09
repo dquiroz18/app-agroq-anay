@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">@color/materialBlue900</color>
+    <color name="primaryDark">@color/customBlueDark</color>
+    <color name="primaryLight">@color/indigo100</color>
+    <color name="accent">@color/materialLightBlue500</color>
+    <color name="primary_text">@color/materialGrey900</color>
+    <color name="secondary_text">@color/materialGrey600</color>
+    <color name="icons">@color/white</color>
+    <color name="divider">@color/materialGrey400</color>
+
+    <color name="p100">@color/customGreen</color>
+    <color name="p80">@color/materialLime500</color>
+    <color name="p60">@color/materialYellow500</color>
+    <color name="p40">@color/materialOrange500</color>
+    <color name="p20">@color/materialDeepOrange500</color>
+    <color name="p0">@color/redAccent700</color>
+
+    <color name="indigo100">#C5CAE9</color>
+    <color name="cream">#ffd966</color>
+    <color name="redLight">#cf2a27</color>
+    <color name="indigo500">#3f51b5</color>
+    <color name="materialBlue900">#0d47a1</color>
+    <color name="customBlueDark">#293d51</color>#
+    <color name="brownLight">#783f04</color>
+    <color name="yellow">#ffff00</color>
+    <color name="materialGrey600">#757575</color>
+    <color name="materialGrey400">#BDBDBD</color>
+    <color name="whiteBoneLight">#f7f7f7</color>
+    <color name="whiteBone">#dddddd</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="materialGrey900">#212121</color>
+    <color name="materialLightBlue500">#03A9F4</color>
+    <color name="customGreen">#009e0f</color>
+    <color name="customYellowDark">#c4d600</color>
+    <color name="customAmber">#ffc107</color>
+    <color name="customOrangeLight">#ffa600</color>
+    <color name="customOrange">#ff9800</color>
+
+    <color name="redAccent700">#d50000</color>
+    <color name="materialDeepOrange500">#ff5722</color>
+    <color name="materialOrange500">#ff9800</color>
+    <color name="materialYellow500">#ffeb3b</color>
+    <color name="materialLime500">#cddc39</color>
+
+</resources>

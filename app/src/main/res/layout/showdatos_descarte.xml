@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <TextView
+        android:id="@+id/tView_FechaHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Fecha Descarte"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tView_NFrutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data_recepcion_planta"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toStartOf="@+id/tView_FechaHora"
+        app:layout_constraintTop_toBottomOf="@+id/tViewFechaRecepcion" />
+
+    <TextView
+        android:id="@+id/tView_NOrdenProceso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data_recepcion_nordenproceso"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toStartOf="@+id/tView_NFrutos"
+        app:layout_constraintTop_toBottomOf="@+id/tViewNFrutos" />
+
+    <TextView
+        android:id="@+id/tView_Productor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data_recepcion_productor"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toStartOf="@+id/tView_NOrdenProceso"
+        app:layout_constraintTop_toBottomOf="@+id/tViewNOrdenProceso" />
+
+    <TextView
+        android:id="@+id/tView_Cultivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data_recepcion_variedad"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toStartOf="@+id/tView_Productor"
+        app:layout_constraintTop_toBottomOf="@+id/tViewProductor" />
+
+    <TextView
+        android:id="@+id/tView_NUnidades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data_recepcion_nunidades"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toStartOf="@+id/tView_Cultivo"
+        app:layout_constraintTop_toBottomOf="@+id/tViewControlador" />
+
+    <TextView
+        android:id="@+id/tView_Kilos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kilos Descarte"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toStartOf="@+id/tView_NUnidades"
+        app:layout_constraintTop_toBottomOf="@+id/tViewUnidades" />
+
+    <TextView
+        android:id="@+id/tViewTP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPoints"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tView_FechaHora"
+        app:layout_constraintStart_toEndOf="@+id/tView_FechaHora" />
+
+    <TextView
+        android:id="@+id/tViewTP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPoints"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tView_NFrutos"
+        app:layout_constraintStart_toEndOf="@+id/tView_NFrutos" />
+
+    <TextView
+        android:id="@+id/tViewTP3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPoints"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tView_NOrdenProceso"
+        app:layout_constraintStart_toEndOf="@+id/tView_NOrdenProceso" />
+
+    <TextView
+        android:id="@+id/tViewTP5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPoints"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tView_Productor"
+        app:layout_constraintStart_toEndOf="@+id/tView_Productor" />
+
+    <TextView
+        android:id="@+id/tViewTP6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPoints"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tView_Cultivo"
+        app:layout_constraintStart_toEndOf="@+id/tView_Cultivo" />
+
+    <TextView
+        android:id="@+id/tViewT7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPoints"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tView_NUnidades"
+        app:layout_constraintStart_toEndOf="@+id/tView_NUnidades" />
+
+    <TextView
+        android:id="@+id/tViewTP8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPoints"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/tView_Kilos"
+        app:layout_constraintStart_toEndOf="@+id/tView_Kilos" />
+
+    <TextView
+        android:id="@+id/tViewFechaRecepcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/prueba_texto_corto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tViewTP1"
+        app:layout_constraintTop_toTopOf="@+id/tViewTP1" />
+
+    <TextView
+        android:id="@+id/tViewNFrutos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/prueba_texto_corto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toEndOf="@+id/tViewTP2"
+        app:layout_constraintTop_toTopOf="@+id/tViewTP2" />
+
+    <TextView
+        android:id="@+id/tViewNOrdenProceso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/prueba_texto_corto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toEndOf="@+id/tViewTP3"
+        app:layout_constraintTop_toTopOf="@+id/tViewTP3" />
+
+    <TextView
+        android:id="@+id/tViewProductor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/prueba_texto_corto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toEndOf="@+id/tViewTP5"
+        app:layout_constraintTop_toTopOf="@+id/tViewTP5" />
+
+    <TextView
+        android:id="@+id/tViewCultivo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/prueba_texto_corto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toEndOf="@+id/tViewTP6"
+        app:layout_constraintTop_toTopOf="@+id/tViewTP6" />
+
+    <TextView
+        android:id="@+id/tViewUnidades"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/prueba_texto_corto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toEndOf="@+id/tViewT7"
+        app:layout_constraintTop_toTopOf="@+id/tViewT7" />
+
+    <TextView
+        android:id="@+id/tViewPesoTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/prueba_texto_corto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tViewTP8"
+        app:layout_constraintTop_toTopOf="@+id/tViewTP8"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo Envase"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toStartOf="@+id/tView_Cultivo"
+        app:layout_constraintTop_toBottomOf="@+id/tViewCultivo" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPoints"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/textView30"
+        app:layout_constraintStart_toEndOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/tViewControlador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/prueba_texto_corto"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/textsize_secondary"
+        app:layout_constraintStart_toEndOf="@+id/textView31"
+        app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

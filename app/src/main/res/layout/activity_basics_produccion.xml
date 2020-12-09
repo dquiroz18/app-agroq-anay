@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".views.ActivityBasicsProduccion">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/listo"
+        android:onClick="pressListo"
+        android:textColor="@color/icons"
+        android:background="@drawable/shape_primary_primarydark_br0_b0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLayoutIntoSView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/button2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tViewTwoPoints2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/twoPoints"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/textsize_primary"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tViewProccessName2"
+                    app:layout_constraintStart_toEndOf="@+id/tViewProccessName2" />
+
+                <TextView
+                    android:id="@+id/tViewProccessName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:maxWidth="200dp"
+                    android:text="PROCESO"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/textsize_primary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tViewTittle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:maxWidth="200dp"
+                    android:text="@string/datosbasicos"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/textsize_secondary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/tViewProccessName2"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewStatusProcess" />
+
+                <TextView
+                    android:id="@+id/tViewStatusProcess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:maxWidth="200dp"
+                    android:text="@string/registro"
+                    android:textAllCaps="true"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/textsize_primary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/tViewTwoPoints2"
+                    app:layout_constraintTop_toTopOf="@+id/tViewTwoPoints2" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shadow_center"
+                    android:paddingBottom="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewTittle">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clCalibre"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayoutVarriddda"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayoutVarriddda"
+                        app:layout_constraintTop_toTopOf="@+id/textView16">
+
+                        <Spinner
+                            android:id="@+id/spnCalibre"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/tipoenvases"
+                            android:spinnerMode="dialog"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clTipoCalibre"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayoutVarriddda"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayoutVarriddda"
+                        app:layout_constraintTop_toTopOf="@+id/textView12">
+
+                        <Spinner
+                            android:id="@+id/spnTipoCalibre"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/tipoenvases"
+                            android:spinnerMode="dialog"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clDestino"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayoutVarriddda"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayoutVarriddda"
+                        app:layout_constraintTop_toTopOf="@+id/textView23">
+
+                        <Spinner
+                            android:id="@+id/spnDestino"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/tipoenvases"
+                            android:spinnerMode="dialog"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMuestraData"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+                        app:layout_constraintTop_toTopOf="@+id/textView8">
+
+                        <Spinner
+                            android:id="@+id/spnCategoria"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/variedades"
+                            android:spinnerMode="dialog"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constSpnPlanta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewZona"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewFechaRecepcion"
+                        app:layout_constraintStart_toStartOf="@+id/tViewFechaRecepcion"
+                        app:layout_constraintTop_toTopOf="@+id/tViewZona">
+
+                        <Spinner
+                            android:id="@+id/spnZona"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/zonas"
+                            android:spinnerMode="dialog"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="122dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Fecha Proceso"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twoPoints"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                        app:layout_constraintStart_toEndOf="@+id/textView20" />
+
+                    <TextView
+                        android:id="@+id/tViewZona"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_recepcion_zona"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewNOrdenProceso"
+                        app:layout_constraintStart_toStartOf="@+id/tViewNOrdenProceso"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextNOrdenProceso" />
+
+                    <TextView
+                        android:id="@+id/tViewNOrdenProceso"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_recepcion_nordenproceso"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/textView20"
+                        app:layout_constraintStart_toStartOf="@+id/textView20"
+                        app:layout_constraintTop_toBottomOf="@+id/tViewFechaRecepcion" />
+
+                    <TextView
+                        android:id="@+id/tViewFechaRecepcion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/prueba_texto_corto"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView21"
+                        app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cLayoutSpnProductor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewProductor"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewFechaRecepcion"
+                        app:layout_constraintStart_toStartOf="@+id/tViewFechaRecepcion"
+                        app:layout_constraintTop_toTopOf="@+id/tViewProductor">
+
+                        <Spinner
+                            android:id="@+id/spnProductor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/empresas"
+                            android:spinnerMode="dialog"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/tViewProductor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_recepcion_productor"
+                        android:textColor="@color/primary_text"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewZona"
+                        app:layout_constraintStart_toStartOf="@+id/tViewZona"
+                        app:layout_constraintTop_toBottomOf="@+id/constSpnPlanta" />
+
+                    <TextView
+                        android:id="@+id/tViewFundo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_recepcion_fundo"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewProductor"
+                        app:layout_constraintStart_toStartOf="@+id/tViewProductor"
+                        app:layout_constraintTop_toBottomOf="@+id/cLayoutSpnProductor" />
+
+                    <TextView
+                        android:id="@+id/tViewCultivo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_recepcion_cultivo"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewFundo"
+                        app:layout_constraintStart_toStartOf="@+id/tViewFundo"
+                        app:layout_constraintTop_toBottomOf="@+id/cLayoutSpnFundo" />
+
+                    <TextView
+                        android:id="@+id/iViewVariedad"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_recepcion_variedad"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewCultivo"
+                        app:layout_constraintStart_toStartOf="@+id/tViewFundo"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+                    <TextView
+                        android:id="@+id/tViewControlador"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_recepcion_tipoenvase"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/textView8"
+                        app:layout_constraintStart_toStartOf="@+id/textView8"
+                        app:layout_constraintTop_toBottomOf="@+id/clDestino" />
+
+                    <EditText
+                        android:id="@+id/eTextNOrdenProceso"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewNOrdenProceso"
+                        app:layout_constraintEnd_toEndOf="@+id/constSpnPlanta"
+                        app:layout_constraintStart_toStartOf="@+id/constSpnPlanta"
+                        app:layout_constraintTop_toTopOf="@+id/tViewNOrdenProceso" />
+
+                    <TextView
+                        android:id="@+id/tViewUnidades"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_recepcion_nunidades"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/textView16"
+                        app:layout_constraintStart_toStartOf="@+id/textView16"
+                        app:layout_constraintTop_toBottomOf="@+id/clCalibre" />
+
+                    <TextView
+                        android:id="@+id/tViewPesoTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="19dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Kilos Proceso"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewUnidades"
+                        app:layout_constraintStart_toStartOf="@+id/tViewUnidades"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextNUnidades" />
+
+                    <EditText
+                        android:id="@+id/eTextKilos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewPesoTotal"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextNUnidades"
+                        app:layout_constraintStart_toStartOf="@+id/eTextNUnidades"
+                        app:layout_constraintTop_toTopOf="@+id/tViewPesoTotal" />
+
+                    <EditText
+                        android:id="@+id/eTextNUnidades"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewUnidades"
+                        app:layout_constraintEnd_toEndOf="@+id/cLayoutSpnProductor"
+                        app:layout_constraintStart_toStartOf="@+id/cLayoutSpnProductor"
+                        app:layout_constraintTop_toTopOf="@+id/tViewUnidades" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cLayoutSpnFundo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewFundo"
+                        app:layout_constraintEnd_toEndOf="@+id/cLayoutSpnProductor"
+                        app:layout_constraintStart_toStartOf="@+id/cLayoutSpnProductor"
+                        app:layout_constraintTop_toTopOf="@+id/tViewFundo">
+
+                        <Spinner
+                            android:id="@+id/spnFundo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/fundos"
+                            android:spinnerMode="dialog"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewCultivo"
+                        app:layout_constraintEnd_toEndOf="@+id/cLayoutSpnFundo"
+                        app:layout_constraintStart_toStartOf="@+id/cLayoutSpnFundo"
+                        app:layout_constraintTop_toTopOf="@+id/tViewCultivo">
+
+                        <Spinner
+                            android:id="@+id/spnCultivo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/cultivos"
+                            android:spinnerMode="dialog"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayoutVarriddda"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/iViewVariedad"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+                        app:layout_constraintTop_toTopOf="@+id/iViewVariedad">
+
+                        <Spinner
+                            android:id="@+id/spnVariedad"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/variedades"
+                            android:spinnerMode="dialog"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clEnvase"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewControlador"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayoutVarriddda"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayoutVarriddda"
+                        app:layout_constraintTop_toTopOf="@+id/tViewControlador">
+
+                        <Spinner
+                            android:id="@+id/spnTipoEnvase"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/tipoenvases"
+                            android:spinnerMode="dialog"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Categoria"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/iViewVariedad"
+                        app:layout_constraintStart_toStartOf="@+id/iViewVariedad"
+                        app:layout_constraintTop_toBottomOf="@+id/clEnvase" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Tipo Calibre"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewControlador"
+                        app:layout_constraintStart_toStartOf="@+id/tViewControlador"
+                        app:layout_constraintTop_toBottomOf="@+id/clMuestraData" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Calibre"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/textView12"
+                        app:layout_constraintStart_toStartOf="@+id/textView12"
+                        app:layout_constraintTop_toBottomOf="@+id/clTipoCalibre"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Destino"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_tertiary"
+                        app:layout_constraintEnd_toEndOf="@+id/tViewControlador"
+                        app:layout_constraintStart_toStartOf="@+id/tViewControlador"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutVarriddda" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btnImportRecepcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_primary_br15"
+                    android:backgroundTintMode="src_atop"
+                    android:elevation="30dp"
+                    android:paddingLeft="10dp"
+                    android:onClick="importRecepcion"
+                    android:paddingRight="10dp"
+                    android:shadowColor="@color/materialGrey600"
+                    android:shadowDx="1.0"
+                    android:shadowDy="2.5"
+                    android:text="Importar #Orden"
+                    android:textAllCaps="false"
+                    android:textColor="@color/icons"
+                    android:textSize="@dimen/textsize_tertiary"
+                    app:layout_constraintBottom_toBottomOf="@+id/tViewTittle"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout11"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewTittle" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

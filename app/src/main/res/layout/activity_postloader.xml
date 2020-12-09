@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.ActivityPostloader">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/background1"
+        android:contentDescription="@string/desc_background1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constCombo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constComboBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.7"
+            android:background="@color/whiteBone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constComboContenido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/iViewLogoIncavo"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/desc_logo_incavo"
+                android:cropToPadding="true"
+                android:src="@drawable/incavo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/btnProcessRecepcion"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_primary_br15"
+                android:text="@string/processname_recepcion"
+                android:textColor="@color/icons"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/iViewLogoIncavo"
+                app:layout_constraintStart_toStartOf="@+id/iViewLogoIncavo"
+                app:layout_constraintTop_toBottomOf="@+id/iViewLogoIncavo" />
+
+            <Button
+                android:id="@+id/btnProcessProduccion"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_primary_br15"
+                android:text="@string/processname_produccion"
+
+                android:textColor="@color/icons"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnProcessRecepcion"
+                app:layout_constraintStart_toStartOf="@+id/btnProcessRecepcion"
+                app:layout_constraintTop_toBottomOf="@+id/btnProcessRecepcion" />
+
+            <Button
+                android:id="@+id/btnProcessDespacho"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_primary_br15"
+                android:text="@string/processname_despacho"
+                android:textColor="@color/icons"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnProcessProduccion"
+                app:layout_constraintStart_toStartOf="@+id/btnProcessProduccion"
+                app:layout_constraintTop_toBottomOf="@+id/btnProcessProduccion" />
+
+            <Button
+                android:id="@+id/btnProcessDescarte"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_primary_br15"
+                android:text="@string/processname_descarte"
+                android:textColor="@color/icons"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/btnProcessDespacho"
+                app:layout_constraintStart_toStartOf="@+id/btnProcessDespacho"
+                app:layout_constraintTop_toBottomOf="@+id/btnProcessDespacho" />
+
+            <Button
+                android:id="@+id/btnCerrarSession"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_primarydark_br15"
+                android:text="Cerrar Sesión"
+                android:textColor="@color/icons"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btnProcessDescarte"
+                app:layout_constraintStart_toStartOf="@+id/btnProcessDescarte"
+                app:layout_constraintTop_toBottomOf="@+id/btnProcessDescarte" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tViewCompanyMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mark_margin_bottom"
+        android:layout_marginEnd="@dimen/mark_margin_end"
+        android:text="@string/company_mark"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/mark_size_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:visibility="invisible"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:layout_constraintBottom_toBottomOf="@+id/clCerrarSession"
+        app:layout_constraintStart_toStartOf="@+id/clCerrarSession"
+        app:layout_constraintTop_toTopOf="@+id/clCerrarSession"
+        app:srcCompat="@drawable/ic_chevron_left_white_24dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCerrarSession"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        android:background="@drawable/shape_primary_br15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Cerrar Sesión"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_primary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

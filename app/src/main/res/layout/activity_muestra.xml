@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".views.ActivityMuestra">
+
+
+            <TextView
+                android:id="@+id/tViewDatosBasicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="24dp"
+
+                android:layout_marginTop="24dp"
+                android:text="@string/datosbasicos"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/textsize_primary"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMuestraData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shadow_center"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tViewDatosBasicos">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/tView_FechaHora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_muestra_fecha"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_primary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tView_NUnidades"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/data_muestra_nmuestra"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_primary"
+                        app:layout_constraintStart_toStartOf="@+id/tView_FechaHora"
+                        app:layout_constraintTop_toBottomOf="@+id/tViewFechaRecepcion" />
+
+                    <TextView
+                        android:id="@+id/tViewTP1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/twoPoints"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_primary"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tView_FechaHora"
+                        app:layout_constraintStart_toEndOf="@+id/tView_FechaHora" />
+
+                    <TextView
+                        android:id="@+id/tViewTP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/twoPoints"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_primary"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/tView_NUnidades"
+                        app:layout_constraintStart_toStartOf="@+id/tViewTP1"
+                        app:layout_constraintTop_toTopOf="@+id/tView_NUnidades" />
+
+                    <TextView
+                        android:id="@+id/tViewFechaRecepcion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:paddingStart="5dp"
+                        android:text="@string/prueba_texto_corto"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_primary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tViewTP1"
+                        app:layout_constraintTop_toTopOf="@+id/tViewTP1" />
+
+                    <EditText
+                        android:id="@+id/eTextNFrutosMuestra"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="number"
+                        android:paddingStart="5dp"
+                        android:textSize="@dimen/textsize_primary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tViewTP"
+                        app:layout_constraintTop_toTopOf="@+id/tViewTP" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tViewMuestras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/evaluaciones"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clMuestraData" />
+
+
+    <ListView
+        android:id="@+id/lViewEvaluaciones"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:dividerHeight="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tViewMuestras" />
+
+    <LinearLayout
+        android:id="@+id/cLayoutSpaceButton"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"></LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fButtonAddEvalaucion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:onClick="showListEvaluaciones"
+                app:srcCompat="@drawable/ic_add_icons_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tViewMuestras"
+                app:layout_constraintEnd_toEndOf="@+id/clMuestraData"
+                app:layout_constraintTop_toTopOf="@+id/tViewMuestras" />
+
+            <TextView
+                android:id="@+id/tViewMuestra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/muestra"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/textsize_primary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tViewDatosBasicos"
+                app:layout_constraintStart_toEndOf="@+id/tViewDatosBasicos"
+                app:layout_constraintTop_toTopOf="@+id/tViewDatosBasicos" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fButtonComentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/primary"
+                android:onClick="showComent"
+                android:clickable="true"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                app:srcCompat="@drawable/ic_comment_icons_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/fButtonAddEvalaucion"
+                app:layout_constraintEnd_toStartOf="@+id/fButtonAddEvalaucion"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toEndOf="@+id/tViewMuestras"
+                app:layout_constraintTop_toTopOf="@+id/fButtonAddEvalaucion"
+                app:rippleColor="@color/primaryLight"
+                android:focusable="true" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:scaleY="0.8"
+                android:scaleX="0.8"
+                android:onClick="openPhotoGallery"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/fButtonComentario"
+                app:layout_constraintEnd_toStartOf="@+id/fButtonComentario"
+                app:layout_constraintTop_toTopOf="@+id/fButtonComentario"
+                app:srcCompat="@drawable/ic_photo_ddd_100dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rViewEvaluaciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

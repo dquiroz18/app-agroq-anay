@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ibao.agroq">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application android:requestLegacyExternalStorage="true"
+        android:name="com.ibao.agroq.app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity
+            android:name="com.ibao.agroq.views.ActivityEvaluacionDetalle"
+            android:label="@string/title_activity_evaluacion_detalle"
+            android:parentActivityName="com.ibao.agroq.views.ActivityMuestra" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityListRecepcionesOP"
+            android:label="@string/title_activity_list_recepciones_op" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityResultRecepcion"
+            android:label="@string/title_activity_result_recepcion" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityPreloader"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ibao.agroq.views.ActivityLogin"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityPostloader"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityMain"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityProceso"
+            android:parentActivityName="com.ibao.agroq.views.ActivityMain" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityBasicsRecepcion"
+            android:parentActivityName="com.ibao.agroq.views.ActivityProceso" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityBasicsProduccion"
+            android:parentActivityName="com.ibao.agroq.views.ActivityProceso" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityBasicsDespacho"
+            android:parentActivityName="com.ibao.agroq.views.ActivityProceso" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityBasicsDescarte"
+            android:parentActivityName="com.ibao.agroq.views.ActivityProceso" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityMuestra"
+            android:parentActivityName="com.ibao.agroq.views.ActivityProceso" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityMuestraDespacho"
+            android:parentActivityName="com.ibao.agroq.views.ActivityProceso" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityPhotoGallery"
+            android:parentActivityName="com.ibao.agroq.views.ActivityEvaluacionDetalle" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityUpdate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ibao.agroq.views.ActivityUpload"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource"/>
+        </provider>
+
+        <service
+            android:name="com.ibao.agroq.services.UpdateService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".views.ActivityBasicsDespacho">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLayoutIntoSView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/button2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tViewTittle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:maxWidth="200dp"
+                    android:text="Datos Básicos Inspección"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/textsize_secondary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout11"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tViewTittle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:maxWidth="200dp"
+                    android:text="Datos Básicos Despacho"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/textsize_secondary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout9"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout11" />
+
+                <TextView
+                    android:id="@+id/tViewTittle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:maxWidth="200dp"
+                    android:text="Configuración Contenedor"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/textsize_secondary"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout7"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout9" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shadow_center"
+                    android:paddingBottom="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewTittle">
+
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Pallets Number"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView64"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextNameControlador" />
+
+                    <EditText
+                        android:id="@+id/eTextNPallets"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="number"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewNOrdenProceso"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextNameControlador"
+                        app:layout_constraintStart_toStartOf="@+id/eTextNameControlador"
+                        app:layout_constraintTop_toTopOf="@+id/textView72" />
+
+                    <TextView
+                        android:id="@+id/textView73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Boxes/Pallet"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView72"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextNPallets" />
+
+                    <EditText
+                        android:id="@+id/eTextNCajasPallet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="number"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewNOrdenProceso"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextNPallets"
+                        app:layout_constraintStart_toStartOf="@+id/eTextNPallets"
+                        app:layout_constraintTop_toTopOf="@+id/textView73" />
+
+                    <EditText
+                        android:id="@+id/eTextPesoCaja"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextNCajasPallet"
+                        app:layout_constraintStart_toStartOf="@+id/eTextNCajasPallet"
+                        app:layout_constraintTop_toTopOf="@+id/textView74" />
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Box Weigth (gr.)"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView73"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextNCajasPallet" />
+
+                    <TextView
+                        android:id="@+id/textView64"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Controller Name"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView20"
+                        app:layout_constraintTop_toBottomOf="@+id/tViewFechaRecepcion" />
+
+                    <EditText
+                        android:id="@+id/eTextNameControlador"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewNOrdenProceso"
+                        app:layout_constraintEnd_toEndOf="@+id/iViewEditFechaInspeccion"
+                        app:layout_constraintStart_toStartOf="@+id/tViewFechaRecepcion"
+                        app:layout_constraintTop_toTopOf="@+id/textView64" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Inspection Date"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tViewFechaRecepcion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/prueba_texto_corto"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/iViewEditFechaInspeccion"
+                        app:layout_constraintStart_toEndOf="@+id/textView40"
+                        app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+                    <ImageView
+                        android:id="@+id/iViewEditFechaInspeccion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewFechaRecepcion"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tViewFechaRecepcion"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text=" "
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="60dp"
+                    android:background="@drawable/shadow_center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewTittle3"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textView81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Temperature (°C)"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView86"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextTecnologia" />
+
+                    <EditText
+                        android:id="@+id/eTextTemperatura"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="numberSigned|numberDecimal"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView81"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextTecnologia"
+                        app:layout_constraintStart_toStartOf="@+id/eTextTecnologia"
+                        app:layout_constraintTop_toTopOf="@+id/textView81" />
+
+                    <EditText
+                        android:id="@+id/eTextCO2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView82"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextTemperatura"
+                        app:layout_constraintStart_toStartOf="@+id/eTextTemperatura"
+                        app:layout_constraintTop_toTopOf="@+id/textView82" />
+
+                    <EditText
+                        android:id="@+id/eTextO2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView84"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextCO2"
+                        app:layout_constraintStart_toStartOf="@+id/eTextCO2"
+                        app:layout_constraintTop_toTopOf="@+id/textView84" />
+
+                    <TextView
+                        android:id="@+id/textView86"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Technology CA"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/eTextTecnologia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView86"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView75"
+                        app:layout_constraintTop_toTopOf="@+id/textView86" />
+
+                    <TextView
+                        android:id="@+id/textView84"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="% O2"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView82"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextCO2" />
+
+                    <TextView
+                        android:id="@+id/textView82"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="% CO2"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView81"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextTemperatura" />
+
+                    <TextView
+                        android:id="@+id/textView75"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text=" "
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shadow_center"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout11"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout11"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewTittle2"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="Termographs 3"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/textView66"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextTermo2"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <EditText
+                        android:id="@+id/eTextTermo3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView67"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextTermo2"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/eTextTermo2"
+                        app:layout_constraintTop_toTopOf="@+id/textView67"
+                        app:layout_constraintVertical_bias="0.4" />
+
+                    <EditText
+                        android:id="@+id/eTextTermo2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView66"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextTermo1"
+                        app:layout_constraintStart_toStartOf="@+id/eTextTermo1"
+                        app:layout_constraintTop_toTopOf="@+id/textView66" />
+
+                    <EditText
+                        android:id="@+id/eTextTermo1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView65"
+                        app:layout_constraintEnd_toEndOf="@+id/cBoxPreFrio"
+                        app:layout_constraintStart_toStartOf="@+id/cBoxPreFrio"
+                        app:layout_constraintTop_toTopOf="@+id/textView65" />
+
+                    <TextView
+                        android:id="@+id/textView65"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Termographs 1"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView71"
+                        app:layout_constraintTop_toBottomOf="@+id/cBoxPreFrio" />
+
+                    <TextView
+                        android:id="@+id/textView66"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Termographs 2"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView65"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextTermo1" />
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Pre-Cooled"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView49"
+                        app:layout_constraintTop_toBottomOf="@+id/tViewFechaLlegada" />
+
+                    <CheckBox
+                        android:id="@+id/cBoxPreFrio"
+                        android:layout_width="0dp"
+                        android:layout_height="22dp"
+                        android:text="No"
+                        app:layout_constraintEnd_toEndOf="@+id/iViewEditFechaLlegada"
+                        app:layout_constraintStart_toStartOf="@+id/tViewFechaLlegada"
+                        app:layout_constraintTop_toTopOf="@+id/textView71" />
+
+                    <ImageView
+                        android:id="@+id/iViewEditFechaCarga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewFechaCarga"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextNContenedor"
+                        app:layout_constraintTop_toTopOf="@+id/tViewFechaCarga"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tViewFechaCarga"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/prueba_texto_corto"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/iViewEditFechaCarga"
+                        app:layout_constraintStart_toStartOf="@+id/eTextNContenedor"
+                        app:layout_constraintTop_toTopOf="@+id/textView37" />
+
+                    <ImageView
+                        android:id="@+id/iViewEditFechaSalida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewFechaSalida"
+                        app:layout_constraintEnd_toEndOf="@+id/iViewEditFechaLlegada"
+                        app:layout_constraintTop_toTopOf="@+id/tViewFechaSalida"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/iViewEditFechaLlegada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/tViewFechaLlegada"
+                        app:layout_constraintEnd_toEndOf="@+id/iViewEditFechaCarga"
+                        app:layout_constraintTop_toTopOf="@+id/tViewFechaLlegada"
+                        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tViewFechaLlegada"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/prueba_texto_corto"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/iViewEditFechaLlegada"
+                        app:layout_constraintStart_toStartOf="@+id/tViewFechaCarga"
+                        app:layout_constraintTop_toTopOf="@+id/textView49" />
+
+                    <TextView
+                        android:id="@+id/tViewFechaSalida"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/prueba_texto_corto"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView55"
+                        app:layout_constraintEnd_toStartOf="@+id/iViewEditFechaSalida"
+                        app:layout_constraintStart_toStartOf="@+id/tViewFechaLlegada"
+                        app:layout_constraintTop_toTopOf="@+id/textView55" />
+
+                    <TextView
+                        android:id="@+id/textView49"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="E.T.A"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView37"
+                        app:layout_constraintTop_toBottomOf="@+id/tViewFechaSalida" />
+
+                    <TextView
+                        android:id="@+id/textView55"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="E.T.D"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView49"
+                        app:layout_constraintTop_toBottomOf="@+id/tViewFechaCarga" />
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Loading Date"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView78"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextNContenedor" />
+
+                    <TextView
+                        android:id="@+id/textView76"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Container Number"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextTransportModel" />
+
+                    <EditText
+                        android:id="@+id/eTextNContenedor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/eTextTransportModel"
+                        app:layout_constraintTop_toTopOf="@+id/textView76" />
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="50dp"
+                        android:text="Origin"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView63"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Type"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Costumer"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextOrigen" />
+
+                    <TextView
+                        android:id="@+id/textView78"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="76dp"
+                        android:text="GGN"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView77"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextCliente" />
+
+                    <TextView
+                        android:id="@+id/textView69"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="RG"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView77"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextCliente" />
+
+                    <TextView
+                        android:id="@+id/textView70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:text="N° Packing List"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView77"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextCliente" />
+
+                    <TextView
+                        android:id="@+id/textView79"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Booking"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView78"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextGGN" />
+
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Vessel"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textView79"
+                        app:layout_constraintTop_toBottomOf="@+id/eTextNReserva" />
+
+                    <TextView
+                        android:id="@+id/textView83"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text=" "
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/eTextOrigen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView83"
+                        app:layout_constraintTop_toTopOf="@+id/textView77" />
+
+                    <EditText
+                        android:id="@+id/eTextCliente"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView83"
+                        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+                    <EditText
+                        android:id="@+id/eTextRG"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/textView83"
+                        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+                    <EditText
+                        android:id="@+id/eTextPL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="68dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.25"
+                        app:layout_constraintStart_toEndOf="@+id/textView83"
+                        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+                    <EditText
+                        android:id="@+id/eTextGGN"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="number"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextOrigen"
+                        app:layout_constraintStart_toStartOf="@+id/eTextOrigen"
+                        app:layout_constraintTop_toTopOf="@+id/textView78" />
+
+                    <EditText
+                        android:id="@+id/eTextNReserva"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextGGN"
+                        app:layout_constraintStart_toStartOf="@+id/eTextGGN"
+                        app:layout_constraintTop_toTopOf="@+id/textView79" />
+
+                    <EditText
+                        android:id="@+id/eTextTransportModel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_none_bgrey600_br0_b1"
+                        android:ems="10"
+                        android:hint="@string/escribe_aqui"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextNReserva"
+                        app:layout_constraintStart_toStartOf="@+id/eTextNReserva"
+                        app:layout_constraintTop_toTopOf="@+id/textView80" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView83"
+                        app:layout_constraintTop_toTopOf="@+id/textView63">
+
+                        <RadioButton
+                            android:id="@+id/rbAereo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aéreo" />
+
+                        <RadioButton
+                            android:id="@+id/rbMaritimo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="Marítimo" />
+                    </RadioGroup>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_primary_primarydark_br0_b0"
+        android:onClick="pressListo"
+        android:text="@string/listo"
+        android:textColor="@color/icons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:background="@drawable/shadow_center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView59"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text=" "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Planta :"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_secondary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tView_Producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Producto :"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_secondary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView60"
+            app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+        <TextView
+            android:id="@+id/tViewNFrutos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/prueba_texto_corto"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_secondary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView59"
+            app:layout_constraintTop_toTopOf="@+id/textView60" />
+
+        <TextView
+            android:id="@+id/tViewProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/prueba_texto_corto"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_secondary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tViewNFrutos"
+            app:layout_constraintStart_toStartOf="@+id/tViewNFrutos"
+            app:layout_constraintTop_toTopOf="@+id/tView_Producto" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

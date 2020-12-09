@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cLayoutComplete"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_center"
+    android:theme="@style/AppTheme"
+    tools:layout_editor_absoluteY="25dp">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fAButtonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/redAccent700"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fAButtonResult"
+        app:layout_constraintStart_toStartOf="@+id/fAButtonResult"
+        app:layout_constraintTop_toBottomOf="@+id/fAButtonResult"
+        app:rippleColor="@color/icons"
+        app:srcCompat="@drawable/ic_delete_icons_24dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMuestraData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fAButtonResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tView_FechaHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/data_muestra_fecha"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tView_NFrutos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_muestra_nmuestra"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            app:layout_constraintStart_toStartOf="@+id/tView_FechaHora"
+            app:layout_constraintTop_toBottomOf="@+id/tViewFechaRecepcion" />
+
+        <TextView
+            android:id="@+id/tView_NOrdenProceso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/data_muestra_calificacion"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            app:layout_constraintStart_toStartOf="@+id/tView_NFrutos"
+            app:layout_constraintTop_toBottomOf="@+id/tViewNFrutos" />
+
+        <TextView
+            android:id="@+id/tViewTP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twoPoints"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tView_FechaHora"
+            app:layout_constraintStart_toEndOf="@+id/tView_FechaHora" />
+
+        <TextView
+            android:id="@+id/tViewTP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twoPoints"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            app:layout_constraintBottom_toBottomOf="@+id/tView_NFrutos"
+            app:layout_constraintStart_toEndOf="@+id/tView_NFrutos" />
+
+        <TextView
+            android:id="@+id/tViewTP3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twoPoints"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            app:layout_constraintBottom_toBottomOf="@+id/tView_NOrdenProceso"
+            app:layout_constraintStart_toEndOf="@+id/tView_NOrdenProceso" />
+
+        <TextView
+            android:id="@+id/tViewFechaRecepcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/prueba_texto_corto"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tViewTP1"
+            app:layout_constraintTop_toTopOf="@+id/tViewTP1" />
+
+        <TextView
+            android:id="@+id/tViewNFrutos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/prueba_texto_corto"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tViewTP2"
+            app:layout_constraintTop_toTopOf="@+id/tViewTP2" />
+
+        <TextView
+            android:id="@+id/tViewNOrdenProceso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/prueba_texto_corto"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tViewTP3"
+            app:layout_constraintTop_toTopOf="@+id/tViewTP3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fAButtonResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/primary"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        app:srcCompat="@drawable/ic_remove_red_eye_white_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/primaryLight" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

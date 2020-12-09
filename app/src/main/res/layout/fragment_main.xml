@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/icons"
+    tools:context=".views.FragmentMain">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tViewListado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/listado"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tViewTwoPoints"
+            app:layout_constraintStart_toEndOf="@+id/tViewTwoPoints" />
+
+        <TextView
+            android:id="@+id/tViewTwoPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/twoPoints"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tViewProccessName"
+            app:layout_constraintStart_toEndOf="@+id/tViewProccessName" />
+
+        <TextView
+            android:id="@+id/tViewProccessName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:maxWidth="200dp"
+            android:text="@string/processname_recepcion"
+            android:textAllCaps="true"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/textsize_primary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/ScrollEva"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tViewListado"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLayoutListItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cLayoutAddNew"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shadow_center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <LinearLayout
+                        android:id="@+id/lLayoutAddNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tViewStatusRegistar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/registrar"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/textsize_primary"
+                            tools:layout_editor_absoluteX="27dp"
+                            tools:layout_editor_absoluteY="14dp" />
+
+                        <TextView
+                            android:id="@+id/tViewProccessNameCircle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/processname_recepcion"
+                            android:textColor="@color/primary_text"
+                            android:textSize="@dimen/textsize_primary"
+                            tools:layout_editor_absoluteX="139dp"
+                            tools:layout_editor_absoluteY="56dp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iViewAddCircle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/desc_iview_add_nuevo"
+                        app:srcCompat="@drawable/ic_add_circle_accent_50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/lLayoutAddNew"
+                        app:layout_constraintStart_toStartOf="@+id/lLayoutAddNew"
+                        app:layout_constraintTop_toBottomOf="@+id/lLayoutAddNew"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ListView
+                    android:id="@+id/lViewItems"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:divider="@color/icons"
+                    android:dividerHeight="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cLayoutAddNew"
+                    app:layout_constraintStart_toStartOf="@+id/cLayoutAddNew"
+                    app:layout_constraintTop_toBottomOf="@+id/cLayoutAddNew" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tViewCompanyMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mark_margin_bottom"
+            android:layout_marginEnd="@dimen/mark_margin_end"
+            android:text="@string/company_mark"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/mark_size_text"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

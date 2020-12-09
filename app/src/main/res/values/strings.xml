@@ -1,0 +1,136 @@
+<resources>
+
+    <string name="app_name">agroQ</string>
+    <string name="company_mark">.@ibao</string>
+    <!--
+    descipciones
+    -->
+    <string name="desc_background1">Imagen Fondo 1</string>
+    <string name="desc_background2">Imagen Fondo 2</string>
+    <string name="desc_background3">Imagen Fondo 3</string>
+    <string name="desc_logo_agroq">Logo AgroQ</string>
+    <string name="desc_logo_incavo">Nombre Incavo</string>
+    <string name="desc_iview_add_nuevo">Imagen Circular Añadir</string>
+    <!--
+    nombre de procesos
+    -->
+    <string name="processname_recepcion">Recepción</string>
+    <string name="processname_produccion">Proceso</string>
+    <string name="processname_despacho">Despacho</string>
+    <string name="processname_descarte">Descarte</string>
+
+    <!--
+    opciones de menu navegacion
+    -->
+    <string name="option_update">Actualizar Data</string>
+    <string name="option_upload">Enviar Data</string>
+    <string name="option_logout">Salir</string>
+    <string name="navigation_drawer_open">Barra de Navegación Abierta</string>
+    <string name="navigation_drawer_close">Barra de Navegación Cerrada</string>
+    <!--
+    opciones de menu 2
+    -->
+    <string name="option2_logout">@string/option_logout</string>
+    <!--
+        fragment main
+        -->
+    <string name="listado">listado</string>
+    <string name="twoPoints">:</string>
+    <string name="registrar">Registrar</string>
+
+
+    <!--
+        datos Recepcion
+    -->
+    <string name="data_recepcion_fecha">Fecha Recepción</string>
+    <string name="data_recepcion_planta">Planta</string>
+    <string name="data_recepcion_nordenproceso">#Orden Proceso</string>
+    <string name="data_recepcion_nguia">#Guía</string>
+    <string name="data_recepcion_productor">Productor</string>
+    <string name="data_recepcion_variedad">Variedad</string>
+    <string name="data_recepcion_nunidades">#Unidades</string>
+    <string name="data_recepcion_fundo">Fundo</string>
+    <string name="data_recepcion_cultivo">Cultivo</string>
+    <string name="data_recepcion_tipoenvase">Tipo Envase</string>
+    <string name="data_recepcion_kilos">Kilos Recepción</string>
+    <!--
+    -->
+    <string name="prueba_texto_corto">Texto Corto</string>
+    <!--
+        datos Muestra
+        -->
+    <string name="muestra">Muestra</string>
+    <string name="muestras">Muestras</string>
+    <string name="data_muestra_fecha">Fecha Muestreo</string>
+    <string name="data_muestra_nmuestra"># Frutos Muestra</string>
+    <string name="data_muestra_calificacion">Calificación</string>
+
+    <!--
+        acticity basics
+        -->
+
+    <string name="registro">Registro</string>
+    <string name="datosbasicos">Datos Básicos</string>
+
+    <!--
+        comunes
+    -->
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="comentario">Comentario</string>
+    <string name="texthint_escribecomentario">Escribe tu comentario</string>
+    <string name="listo">Listo</string>
+    <string name="item_1">Item 1</string>
+
+
+    <!--lenguaje del usuario -->
+    <string name="empresa">Productor</string>
+    <string name="fundo">Fundo</string>
+    <string name="cultivo">Cultivo</string>
+    <string name="variedad">Variedad</string>
+    <string name="contacto">Contacto</string>
+    <string name="zona">Zona</string>
+
+    <string name="cabezeraSpnPlanta">Seleccione Planta</string>
+    <string name="cabezeraSpnTipoEnvase">Seleccione Envase</string>
+    <string name="cabezeraSpnContacto">Seleccione Contacto</string>
+    <string name="cabezeraSpnEmpresa">Seleccione Productor</string>
+    <string name="cabezeraSpnZona">Seleccione Zona</string>
+    <string name="cabezeraSpnFundo">Seleccione Fundo</string>
+    <string name="cabezeraSpnCultivo">Seleccione Cultivo</string>
+    <string name="cabezeraSpnVariedad">Seleccione Variedad</string>
+    <string name="escribe_aqui">Escribe Aqui</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="evaluaciones">Evaluaciones</string>
+    <string name="ingresar">INGRESAR</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="usuario">Usuario</string>
+
+    <string name="noevent_btn">Evento no configurado</string>
+    <string name="desc_eyeviewpass">Boton para editar la visualizacion del password</string>
+    <string name="nombre_de_defecto">Nombre de Defecto</string>
+    <string name="registro_evidencia">Registro Evidencia</string>
+    <string name="advertencia_eliminar_recepcion">Esta a punto de eliminar una Recepción. \n ¿DESEA CONTINUAR?</string>
+    <string name="continuar">Continuar</string>
+    <string name="tres_puntos">...</string>
+    <string name="idRecepcion">idRecepcion</string>
+    <string name="isEditable">isEditable</string>
+    <string name="update_porcent">0%</string>
+    <string name="update_status">updateStatus</string>
+    <string name="data_recepcion_zona">Zona</string>
+    <string name="error_al_eliminar">Error al Eliminar</string>
+    <string name="idCriterioDetalle">idCriterioDetalle</string>
+    <string name="total">Total :</string>
+    <string name="idMuestra">idMuestra</string>
+    <string name="title_activity_result_recepcion">ResultRecepcionActivity</string>
+    <string name="resultados_de">Resultados de</string>
+    <string name="tipo_proceso">Tipo Proceso</string>
+    <string name="_100">100</string>
+    <string name="excelente">¡ Excelente !</string>
+    <string name="fecha_produccion">Fecha Proceso</string>
+    <string name="idProceso">idProceso</string>
+    <string name="title_activity_list_recepciones_op">ListRecepcionesOP</string>
+    <string name="origen">Origen</string>
+    <string name="title_activity_evaluacion_detalle">ActivityEvaluacionDetalle</string>
+
+</resources>

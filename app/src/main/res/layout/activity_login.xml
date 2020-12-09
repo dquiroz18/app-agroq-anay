@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.ActivityLogin">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/background1"
+            android:contentDescription="@string/desc_background1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constCombo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constComboBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:alpha="0.7"
+                android:background="@color/whiteBone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constComboContenido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/iViewLogoIncavo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/desc_logo_incavo"
+                    android:cropToPadding="true"
+                    android:src="@drawable/incavo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <!--
+                SPINER PLANTA
+                -->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constSpnPlanta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iViewLogoIncavo">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.5"
+                        android:background="@color/materialGrey600"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/spnZona">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <Spinner
+                        android:id="@+id/spnZona"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/plantas"
+                        android:paddingStart="5dp"
+                        android:spinnerMode="dialog"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--
+                SPINER CULTIVO
+                -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constSpnCultivo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/constSpnPlanta"
+                    app:layout_constraintStart_toStartOf="@+id/constSpnPlanta"
+                    app:layout_constraintTop_toBottomOf="@+id/constSpnPlanta">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.5"
+                        android:background="@color/materialGrey600"
+                        app:layout_constraintBottom_toBottomOf="@+id/spnCultivo"
+                        app:layout_constraintEnd_toEndOf="@+id/spnCultivo"
+                        app:layout_constraintStart_toStartOf="@+id/spnCultivo"
+                        app:layout_constraintTop_toTopOf="@+id/spnCultivo">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <Spinner
+                        android:id="@+id/spnCultivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:entries="@array/plantas"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:spinnerMode="dialog"
+                        android:textSize="@dimen/textsize_secondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!--
+                ETEXT USUARIO
+                -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constETextUsuario"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/constSpnCultivo"
+                    app:layout_constraintStart_toStartOf="@+id/constSpnCultivo"
+                    app:layout_constraintTop_toBottomOf="@+id/constSpnCultivo">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.5"
+                        android:background="@color/materialGrey600"
+                        app:layout_constraintBottom_toBottomOf="@+id/eTextUsuario"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextUsuario"
+                        app:layout_constraintStart_toStartOf="@+id/eTextUsuario"
+                        app:layout_constraintTop_toTopOf="@+id/eTextUsuario">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <EditText
+                        android:id="@+id/eTextUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/usuario"
+                        android:inputType="text"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
+                        android:textColorHint="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!--
+                ETEXT USUARIO
+                -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constETextContrasena"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/constETextUsuario"
+                    app:layout_constraintStart_toStartOf="@+id/constETextUsuario"
+                    app:layout_constraintTop_toBottomOf="@+id/constETextUsuario">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="0.5"
+                        android:background="@color/materialGrey600"
+                        app:layout_constraintBottom_toBottomOf="@+id/eTextPassword"
+                        app:layout_constraintEnd_toEndOf="@+id/eTextPassword"
+                        app:layout_constraintStart_toStartOf="@+id/eTextPassword"
+                        app:layout_constraintTop_toTopOf="@+id/eTextPassword">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <EditText
+                        android:id="@+id/eTextPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/contrasena"
+                        android:inputType="textPassword"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="40dp"
+                        android:textColorHint="@color/primary_text"
+                        android:textSize="@dimen/textsize_secondary"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btnEnter"
+                    android:layout_width="103dp"
+                    android:layout_height="37dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_primary_br15"
+                    android:text="@string/ingresar"
+                    android:textColor="@color/icons"
+                    android:textSize="@dimen/textsize_tertiary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/constETextContrasena"
+                    app:layout_constraintStart_toStartOf="@+id/constETextContrasena"
+                    app:layout_constraintTop_toBottomOf="@+id/constETextContrasena" />
+
+                <ImageView
+                    android:id="@+id/iViewPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/constETextContrasena"
+                    app:layout_constraintEnd_toEndOf="@+id/constETextContrasena"
+                    app:layout_constraintTop_toTopOf="@+id/constETextContrasena"
+                    app:srcCompat="@drawable/ic_remove_red_eye_black_24dp"
+                    android:contentDescription="@string/desc_eyeviewpass" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tViewCompanyMark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/mark_margin_bottom"
+            android:layout_marginEnd="@dimen/mark_margin_end"
+            android:text="@string/company_mark"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/mark_size_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
