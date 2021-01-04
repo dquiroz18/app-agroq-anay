@@ -8,7 +8,7 @@ android {
         applicationId 'ibao.agroq.anay'
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 7
+        versionCode 8
         versionName "2.0d"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
